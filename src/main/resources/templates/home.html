@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlogSphere-----Home</title>
+    <style>
+        body {
+            font-family : "Berlin Sans FB", sans-serif;
+            background: linear-gradient(to bottom, rgba(111, 166, 255, 0.99), rgba(255, 26, 122, 0.61));
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background: linear-gradient(135deg, #d3e9ed, #bafffd);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease; /* Added border-radius to the transition */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+
+            border-radius: 50px; /* Increased border-radius for more curve */
+
+            position: relative; /* Make the container a positioning context */
+        }
+
+        .container:hover {
+            transform: scale(1.05); /* Scale up by 5% on hover for a 3D effect */
+            box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.3); /* Increase the shadow size on hover */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding-top: 20px;
+            background: linear-gradient(to right, #007bff, #28a745);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative; /* Make the h1 element a positioning context */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+        li {
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #28a745;
+            padding: 8px 16px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        h2
+        a {
+            text-decoration: none;
+            color:#fff ;
+            background-color: #f1c27d;
+            padding: 8px 16px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .posts-container {
+            margin-top: 2%;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+            position: relative; /* Make the posts container a positioning context */
+        }
+        .post {
+            margin-bottom: 20px;
+        }
+        .connect-with-me {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .connect-with-me a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .icons {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .icons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #17a2b8;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .auth-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .auth-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .auth-links a:nth-child(1) {
+            background-color: #ffc107; /* Register button color */
+        }
+        .auth-links a:nth-child(2) {
+            background-color: #ceff7b; /* Login button color */
+        }
+        img {
+
+            width: 166px; /* Set the width of the image to be 15% smaller */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute; /* Use absolute positioning */
+            right: 20px; /* Position from the right edge */
+            margin-top: 2%;
+            margin-right: 38%;
+        }
+        .new-post {
+            align-content: center;
+            display: inline-block;
+            width: 30vh;
+            height: 5vh;
+            font-family: "Baskerville Old Face";
+            color: black;
+            background: #00f2fe;
+            font-size: 4.4vh;
+            font-weight: bold;
+        }
+
+.border-lIne{
+    text-align: center;
+    background: #ff07c5;
+    color: #ffffff;
+    font-size: 4.4vh;
+    font-weight: bold;
+    align-content: center;
+    display: inline-block;
+    width: 40vh;
+    height: 5vh;
+    margin-top: 5%;
+    font-family: "Cooper Black";
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.34);
+    border-radius: 10%;
+}
+.Up-data{
+    margin-bottom: 5%;
+}
+        @media only screen and (max-width: 700px) {
+            /* Styles for mobile devices */
+            img {
+                display: block;
+                margin: auto;
+                max-width: 50%;
+                position: relative;
+                top: 5px; /* Adjust the value to move the image further up */
+                align-content: center;
+            }
+
+
+
+            .auth-links {
+                text-align: center;
+                margin-top: 20px; /* Adjust the margin-top value as needed */
+            }
+
+            .new-post {
+                margin-top: 20px; /* Adjust the margin-top value as needed */
+
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to BlogSphere</h1>
+    <img src="/logo.png" alt="BlogSphere logo">
+    <div class="auth-links">
+        <a th:href="@{/register}" style="float: right; margin-top: 7%;">Register</a>
+        <a th:href="@{/login}" style="float: left; margin-top: 7%;">Login</a>
+    </div>
+    <div>
+        <!-- Fixed "New Post" link -->
+        <div style="text-align: center">
+            <a th:href="@{/posts/new}" class="new-post">New Post</a>
+        </div>
+    </div>
+    <!-- Dynamic posts in reverse order -->
+
+    <div th:each="post, stat : ${posts}" class="posts-container">
+<!--     i want to make this sup-->
+            <h2 th:text="${post.title}" class="border-lIne">Title</h2>
+            <h5 th:text="'Written by ' + ${post.account.firstname}" class="Up-data">Account First Name</h5>
+            <h5 th:text="'Published at ' + ${post.createdAt}" class="Up-data">This Post is Created At</h5>
+            <p th:text="${post.body}">body text</p>
+
+
+    </div>
+    <div class="connect-with-me">
+        <a href="https://www.linkedin.com/in/shyanil-mishra-40a686284/">Connect with me</a>
+    </div>
+    <div class="icons">
+        <a href="https://github.com/Shyanil/-BlogSphere">See this site Code</a>
+    </div>
+</div>
+</body>
+</html>

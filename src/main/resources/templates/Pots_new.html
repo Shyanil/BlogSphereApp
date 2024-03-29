@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlogSphere ---- New Post</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #92fe9d, #00c9ff); /* Gradient background */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px; /* Set a maximum width */
+            margin: 30px auto; /* Center the box */
+            padding: 40px 60px; /* Add padding inside the box */
+            background: linear-gradient(135deg, #f9d423, #e65c00); /* Use a gradient background */
+            border-radius: 20px; /* Add a rounded border */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+            color: #fff; /* Text color */
+            text-align: center; /* Center align text */
+            font-size: 1.2rem; /* Font size */
+            transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s; /* Add transitions for a smoother effect */
+        }
+
+        .container {
+            transform: translateY(-5px); /* Move the box up slightly on hover */
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3); /* Increase the shadow on hover */
+        }
+
+
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: Arial, sans-serif;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .container1{
+          background: white;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 2vh;
+            font-family: "Bell MT", sans-serif;
+
+        }
+      .above{
+          font-weight: bold;
+          font-family: "Bookman Old Style";
+          font-size: 20px;
+          text-align: left;
+          color: black;
+      }
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Style the label to look like a button */
+
+
+        /* Style the selected file name */
+        .file-name {
+           margin-left: 10px;
+        }
+        .image-icon {
+            width: 50px; /* Adjust the size as needed */
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        .new-ab {
+
+
+            max-width: 200px; /* Set a smaller maximum width */
+            margin: 30px auto; /* Center the box */
+            padding: 20px 40px; /* Reduce padding inside the box */
+            background: linear-gradient(135deg, #f9d423, #e65c00); /* Use a gradient background */
+            border-radius: 20px; /* Add a rounded border */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow */
+            color: #fff; /* Text color */
+
+            transition: transform 0.3s, box-shadow 0.3s, border-radius 0.3s;
+
+
+        }
+
+        .new-ab:hover {
+            background: linear-gradient(45deg, #0072ff, #00c6ff);
+            color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        .sidebar {
+            /* Positioning on the side of the screen */
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 20px;
+            width: 200px;
+            background-color: #333; /* Dark background color */
+            color: #fff; /* White text color */
+            font-family: "Franklin Gothic Medium";
+
+            text-align: left;
+            z-index: 1000; /* Ensure the sidebar is above other content */
+            margin-left: 20%;
+        }
+
+        .sidebar span {
+            /* Font changes */
+            font-weight: bold;
+            font-size: 1.2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for 3D effect */
+        }
+
+        /* Adding a background gradient */
+        .sidebar {
+            background: linear-gradient(45deg, rgb(16, 252, 181), rgba(177, 255, 0, 0.88)); /* Orange to gold gradient */
+        }
+
+        /* Adding an animation for a smooth slide-in effect */
+        @keyframes slideIn {
+            from {
+                left: -200px; /* Start off the screen */
+            }
+            to {
+                left: 0; /* Slide in to position */
+            }
+        }
+
+        .sidebar {
+            animation: slideIn 0.5s forwards; /* Run the animation once */
+        }
+
+        /* Adding a hover effect */
+        .sidebar:hover {
+            transform: translateY(-50%) scale(1.05); /* Scale up on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+        }
+
+        /* Adding a transition for smooth hover effects */
+        .sidebar {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+         .left-sidebar {
+             /* Positioning on the side of the screen */
+             position: fixed;
+             top: 50%;
+             left: 0;
+             transform: translateY(-50%);
+             padding: 10px;
+             width: 100px; /* Adjust the width as needed */
+             background-color: #333; /* Dark background color */
+             color: #fff; /* White text color */
+             font-family: "Copperplate Gothic Light";
+             text-align: center;
+             z-index: 1000; /* Ensure the sidebar is above other content */
+             margin-left: 64%;
+             border-top-left-radius: 20px; /* Curved border */
+             border-bottom-right-radius: 20px; /* Curved border */
+         }
+
+        .left-sidebar span {
+            /* Font changes */
+            font-weight: bold;
+            font-size: 1.2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for 3D effect */
+        }
+
+        /* Adding a background gradient */
+        .left-sidebar {
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.93), rgba(82, 22, 47, 0.83)); /* Orange to gold gradient */
+        }
+
+        /* Adding an animation for a smooth slide-in effect */
+        @keyframes slideIn {
+            from {
+                left: -200px; /* Start off the screen */
+            }
+            to {
+                left: 0; /* Slide in to position */
+            }
+        }
+
+        .left-sidebar {
+            animation: slideIn 0.5s forwards; /* Run the animation once */
+        }
+
+        /* Adding a hover effect */
+        .left-sidebar:hover {
+            transform: translateY(-50%) scale(1.05); /* Scale up on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow on hover */
+        }
+
+        /* Adding a transition for smooth hover effects */
+        .left-sidebar {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Create a New Post</h2>
+
+
+    <form action="#"
+          th:action="@{'/posts/new'}"
+          th:object="${post}"
+          method="POST">
+        <!-- Remove the hidden field for account -->
+        <input type="hidden" th:field="*{createdAt}" />
+        <div>
+            <label for="new-post-title" class="above">Title</label>
+            <input id="new-post-title" class="container1" type="text" th:field="*{title}" placeholder="Enter a Title"/>
+        </div>
+        <div>
+            <label for="new-post-body" class="above">Body</label>
+            <textarea id="new-post-body" class="container1" th:field="*{body}" placeholder="Write your post here"></textarea>
+        </div>
+        <!-- Display the account's username -->
+
+
+        <button type="submit">Publish Now</button>
+
+    </form>
+
+</div>
+<div class="sidebar">
+    <span>Logged in as:</span>
+    <br>
+    <span th:text="${post.account.email}"></span>
+</div>
+<div class="left-sidebar">
+    <span>Hi</span>
+    <br>
+    <span th:text="${post.account.firstname}"></span>
+</div>
+</body>
+</html>

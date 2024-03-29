@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BlogSphere-----Register</title>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Use a yellow gradient color */
+            background: linear-gradient(135deg, #ffdb58, #ffef96);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px 45px;
+            background: linear-gradient(135deg, rgba(255, 26, 122, 0.83), rgba(255, 137, 137, 0.76));
+            box-shadow: 0px 23px 50px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease; /* Added border-radius to the transition */
+            border: 2px solid rgba(0, 0, 0, 0.1);
+
+            border-radius: 30px; /* Increased border-radius for more curve */
+
+            position: relative; /* Make the container a positioning context */
+        }
+
+        h1 {
+            color: #333333;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666666;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            /* Add shadow to button text */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            /* Add box shadow */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button[type="submit"]:hover {
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+            /* Add box shadow on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+        .go-back{
+            padding: 2px 8px; /* Adjust padding for size */
+            border-radius: 20px; /* Adjust border-radius for curvature */
+            border: 2px solid #333; /* Border style */
+            background-color: rgba(255, 0, 242, 0.85); /* Button background color */
+            color: #ffffff; /* Button text color */
+            font-size: 17px; /* Button text size */
+            cursor: pointer; /* Cursor style */
+            font-style: italic;
+            box-sizing: inherit;
+        }
+        .container1{
+            background: white;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 2vh;
+            font-family: "Bell MT", sans-serif;
+
+        }
+        .above{
+            font-weight: bold;
+            font-family: "Bookman Old Style";
+            font-size: 20px;
+            text-align: left;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to BlogSphere</h1>
+    <a th:href="@{'/'}" class="go-back">Go Back?</a>
+    <form action="#" th:action="@{/register}" th:object="${account}" method="POST">
+        <div>
+            <label for="firstname" class="above">First Name</label>
+            <input id="firstname" class="container1" type="text" th:field="*{firstname}" placeholder="First Name" required/>
+        </div>
+        <div>
+            <label for="lastname" class="above">Last Name</label>
+            <input id="lastname" class="container1" type="text" th:field="*{lastname}" placeholder="Last Name" required/>
+        </div>
+        <div>
+            <label for="email" class="above">Email</label>
+            <input id="email" class="container1" type="text" th:field="*{email}" placeholder="Email" required/>
+        </div>
+        <div>
+            <label for="password" class="above">Password</label>
+            <input id="password" class="container1" type="password" th:field="*{password}" placeholder="Password" required/>
+        </div>
+        <button type="submit">Register!</button>
+    </form>
+</div>
+</body>
+</html>

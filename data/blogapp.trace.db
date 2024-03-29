@@ -1,0 +1,6 @@
+2024-02-11 10:29:45.772625+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]POST POST ACCOUNT POST"; expected "PREPARE"; SQL statement:
+POST POST ACCOUNT POST [42001-224]
+2024-03-26 23:07:04.262116+05:30 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]POST"; expected "PREPARE"; SQL statement:
+POST [42001-224]
