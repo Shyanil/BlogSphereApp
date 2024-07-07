@@ -1,11 +1,14 @@
-<h1 align="center">🌟 BlogSphere 🌟</h1>
-<h3 align="center">🌟 New BlogSphere 🌟</h3>
-<h3>This is an updated version of my old project.</h3>
+<h1>I’m currently collaborating on a project called ’Multi-functional Content
+Platform’ where I contribute as a team member. Initially, I built the foundational project using Spring Boot, HTML,
+and CSS, focusing on backend functionalities</h1>
+<h1 align="center">🌟It is Base  Project we are Working on that enhance both front end and
+backend with higher quality🌟</h1>
 
 
-<h5>Old Project Link - [ https://github.com/Shyanil/-BlogSphere ]</h5>
 
-<p align="center">Welcome to BlogSphere, a beautifully crafted Spring Boot blog application that seamlessly integrates Java for robust backend functionality and HTML&CSS for elegant, responsive design. Dive into a user-friendly interface, featuring easy registration, post management, and community engagement. Experience the power of Java and the artistry of HTML&CSS in a single, cohesive platform.</p>
+<h5>First and more Old Project Link - [ https://github.com/Shyanil/-BlogSphere ]</h5>
+
+
 
 ---
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](link_to_build_status)
@@ -84,12 +87,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🚀 Future Upgrades 
 
-1. **Enhanced Interface**: We aim to further refine BlogSphere's interface, ensuring a more intuitive and visually appealing user experience. [Done]
+1. **Enhanced Interface**: We aim to further refine BlogSphere's interface, ensuring a more intuitive and visually appealing user experience.
    
-2. **Beautiful Design**: Our goal is to elevate the design of BlogSphere, incorporating modern trends and aesthetics to captivate users. [Done]
+2. **Beautiful Design**: Our goal is to elevate the design of BlogSphere, incorporating modern trends and aesthetics to captivate users.
    
-3. **Post Management**: Users will soon be able to update and delete their posts, providing greater control over their content. [Working]
+3. **Post Management**: Users will soon be able to update and delete their posts, providing greater control over their content.
    
-4. **Image Upload**: We're working on enabling users to upload images to enhance their blog posts, adding visual flair and creativity. [Working]
+4. **Image Upload**: We're working on enabling users to upload images to enhance their blog posts, adding visual flair and creativity.
    
 🟩 **Stay tuned for these exciting updates as we continue to improve BlogSphere!** 🟩
