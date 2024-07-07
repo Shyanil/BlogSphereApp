@@ -1,7 +1,7 @@
 <h1>I’m currently collaborating on a project called ’Multi-functional Content
 Platform’ where I contribute as a team member. Initially, I built the foundational project using Spring Boot, HTML,
 and CSS, focusing on backend functionalities</h1>
-<h1 align="center">🌟It is Base  Project we are Working on that enhance both front end and
+<h1 align="center">🌟It is  a Base  Project we are Working on that enhances both the front end and
 backend with higher quality🌟</h1>
 
 
